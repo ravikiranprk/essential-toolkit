@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Essential Calculator",
+  title: "Essential Toolkit",
   description: "An all-in-one essential utility web application",
 };
 
