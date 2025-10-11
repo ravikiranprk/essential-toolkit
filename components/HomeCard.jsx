@@ -1,0 +1,18 @@
+export default function HomeCard({ title, url, currentItems, className }) {
+    return (
+        <header className={`${className} rounded-xl`}>
+            <section>
+                <img src={url} alt={title} className="md:max-w-4/5 w-full" />
+            </section>
+            <div className="flex flex-col gap-1 md:max-w-4/5 w-full homecard-text text-center">
+                {
+                    currentItems.map((item) => (
+                        <section key={item.id}>
+                            <a href={item.url}>{item.name}</a>
+                        </section>
+                    ))
+                }
+            </div>
+        </header>
+    )
+}
