@@ -30,6 +30,7 @@ footer{
 }
 nav {
   font-size: clamp(1rem, 1.75vw, 1.5rem);
+  @apply text-gray-950;
 }
 .footer-header {
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
