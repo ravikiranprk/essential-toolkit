@@ -8,7 +8,7 @@ export default function Calculators() {
             <section className="flex flex-col justify-center items-start calculators-list">
                 {calculators.map((item) => (
                     <ul key={item.id}>
-                        <li href={item.url} className="hover:underline hover:underline-offset-2 hover:text-cyan-600">{item.name}</li>
+                        <li className="hover:underline hover:underline-offset-2 hover:text-cyan-600 cursor-pointer"><a href={item.url}>{item.name}</a></li>
                     </ul>
                 ))}
             </section>
