@@ -6,16 +6,14 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground: var(--background);
+  --color-background: var(--foreground);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #0a0a0a;
   }
 }
 
@@ -26,14 +24,14 @@ body {
 }
 
 footer{
-  font-size: clamp(1.15rem, 2.625vw, 1.75rem);
+  font-size: clamp(1.125rem, 2.25vw, 1.5rem);
 }
 nav {
   font-size: clamp(1rem, 1.75vw, 1.5rem);
   @apply text-gray-950;
 }
 .footer-header {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
 }
 footer * li {
   @apply hover:text-cyan-300 hover:underline underline-offset-2;
@@ -81,3 +79,52 @@ form > h3 {
 .homecard-text * a {
   @apply hover:text-cyan-800 hover:underline underline-offset-2;
 }
+
+.bmi-heading {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+.activeTab {
+  @apply bg-cyan-300 text-gray-900;
+}
+
+.weight {
+  @apply border border-gray-500 rounded !w-[4rem] !h-[2rem] flex justify-center items-center;
+}
+.weight::placeholder {
+  @apply flex items-center justify-center p-2;
+}
+
+
+select {
+  @apply border border-gray-500 rounded;
+}
+.flex-center {
+  @apply flex justify-center items-center;
+}
+.tab-btn {
+  @apply cursor-pointer px-4 py-2;
+}
+.bmi-table-container {
+  @apply border border-gray-500;
+}
+.bmi-table * tr, .bmi-table * th, .bmi-table * td {
+  @apply border border-gray-500;
+  font-size: clamp(1rem, 1.875vw, 1.25rem);
+}
+.bmi-table * th, .bmi-table * td {
+  @apply p-3;
+}
+
+.bmi-h3 {
+  font-size: clamp(1.275rem, 2.5vw, 2rem);
+}
+.bmi-btn {
+  font-size: clamp(1.175rem, 2.25vw, 1.875rem);
+}
+
+.bmi-calc-btn {
+  @apply bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded cursor-pointer;
+  font-size: clamp(1rem, 1.875vw, 1.25rem);
+}
+
