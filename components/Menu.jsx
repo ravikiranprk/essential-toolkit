@@ -38,7 +38,7 @@ export default function Menu() {
                     <button className="md:hidden" onClick={() => setIsOpen(false)}>
                         <AiOutlineClose size={30} />
                     </button>
-                    <nav className="px-6 bg-cyan-100 py-2 mb-6 flex md:hidden">
+                    <nav className="px-6 bg-cyan-100 py-2 flex md:hidden">
                         <ul className="flex flex-col gap-1">
                             {
                                 navItems.map((item) => (
