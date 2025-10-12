@@ -56,14 +56,14 @@ export default function BMIInputTabs() {
         e.preventDefault();
         const bmi = standardBmi;
         if (selectedFeet && selectedInches && weight) {
-            setStandardBmi(bmi.toFixed(2));
+            setStandardBmi(bmi);
         }
     }
     const calculateMetricBmi = (e) => {
         e.preventDefault();
         const bmi = metricBmi;
         if (cm && weightMetric) {
-            setMetricBmi(bmi.toFixed(2));
+            setMetricBmi(bmi);
         }
     }
 
@@ -124,7 +124,7 @@ export default function BMIInputTabs() {
                             >
                                 Calculate BMI
                             </button>
-                            <div>
+                            <div className="mt-4 bmi-result">
                                 <p>
                                     <span className="font-semibold">BMI: </span> {activeTab === 1 ? (isNaN(standardBmi) ? "" : standardBmi) : (isNaN(metricBmi) ? "" : metricBmi)}
                                 </p>
@@ -160,7 +160,7 @@ export default function BMIInputTabs() {
                             >
                                 Calculate BMI
                             </button>
-                            <div>
+                            <div className="mt-4 bmi-result">
                                 <p>
                                     <span className="font-semibold">BMI: </span> {activeTab === 1 ? standardBmi : metricBmi}
                                 </p>

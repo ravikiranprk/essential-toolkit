@@ -128,3 +128,10 @@ select {
   font-size: clamp(1rem, 1.875vw, 1.25rem);
 }
 
+.bmi-result {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.bmi-home-text {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
