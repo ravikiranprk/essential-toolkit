@@ -75,12 +75,12 @@ export const counters =[
     {
         id: 1,
         name: "Words Counter",
-        url: "/words-counter",
+        url: "/word-counter",
     },
     {
         id: 2,
         name: "Letters Counter",
-        url: "/letters-counter",
+        url: "/letter-counter",
     },
     {
         id: 3,

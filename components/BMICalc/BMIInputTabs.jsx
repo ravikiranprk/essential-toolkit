@@ -119,7 +119,7 @@ export default function BMIInputTabs() {
                         </div>
                         <div>
                             <button
-                                className="bmi-calc-btn"
+                                className="bmi-calc-btn hidden"
                                 onClick={calculateStdBmi}
                             >
                                 Calculate BMI
@@ -155,7 +155,7 @@ export default function BMIInputTabs() {
                         </div>
                         <div className="flex flex-col">
                             <button
-                                className="bmi-calc-btn"
+                                className="bmi-calc-btn hidden"
                                 onClick={calculateMetricBmi}
                             >
                                 Calculate BMI
