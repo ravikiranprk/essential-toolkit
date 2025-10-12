@@ -135,3 +135,34 @@ select {
 .bmi-home-text {
   font-size: clamp(1.25rem, 2.5vw, 2rem);
 }
+
+.temp-conv-container {
+  @apply flex flex-col md:flex-row p-8 md:p-16 items-center justify-center bg-amber-100;
+}
+.temp-conv-form-container {
+  width: clamp(400px, 75vw, 600px);
+  height: clamp(360px, 45vh, 700px);
+  @apply border border-gray-200 p-6 rounded-md;
+  @apply flex items-center justify-center flex-col gap-5; 
+  @apply bg-cyan-100; 
+}
+.temp-conv-input > input, .temp-conv-input > select {
+  width: 10rem;
+  font-size: clamp(1rem, 2.25vw, 1.75rem);
+  @apply border border-zinc-600;
+  @apply p-2 rounded-sm;
+}
+.temp-conv-input {
+  @apply flex gap-4;
+}
+.temp-conv-btn > button {
+  @apply bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded cursor-pointer;
+  font-size: clamp(1rem, 2.25vw, 1.75rem);
+}
+select {
+  @apply cursor-pointer;
+}
+input:disabled {
+  @apply cursor-not-allowed;
+}
+

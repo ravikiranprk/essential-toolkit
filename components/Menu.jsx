@@ -13,7 +13,7 @@ export default function Menu() {
 
     return (
         <>
-            <nav className="px-6 py-2 bg-cyan-100 mb-6 hidden md:flex justify-between gap-4">
+            <nav className="px-6 py-2 bg-cyan-100 hidden md:flex justify-between gap-4">
                 <ul className="flex gap-4 justify-start items-center">
                     {
                         navItems.map((item) => (
