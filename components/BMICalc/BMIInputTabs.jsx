@@ -29,22 +29,22 @@ const bmiCalculatorStd = (feet, inches, weight) => {
     const heightInInches = feet * 12 + inches;
     const heightInMeters = heightInInches * 0.0254;
     const bmi = weight / (heightInMeters * heightInMeters);
-    return bmi;
+    return bmi.toFixed(2);
 };
 
 const bmiCalculatorMetric = (cm, kg) => {
     const heightInMeters = cm * 0.01;
     const bmi = kg / (heightInMeters * heightInMeters);
-    return bmi;
+    return bmi.toFixed(2);
 }
 
 export default function BMIInputTabs() {
     const [activeTab, setActiveTab] = useState(1);
-    const [selectedFeet, setSelectedFeet] = useState();
-    const [selectedInches, setSelectedInches] = useState();
-    const [weight, setWeight] = useState(0);
-    const [cm, setCm] = useState(0);
-    const [weightMetric, setWeightMetric] = useState(0);
+    const [selectedFeet, setSelectedFeet] = useState(6);
+    const [selectedInches, setSelectedInches] = useState(2);
+    const [weight, setWeight] = useState(85);
+    const [cm, setCm] = useState(187.96);
+    const [weightMetric, setWeightMetric] = useState(85);
 
     let [standardBmi, setStandardBmi] = useState();
     let [metricBmi, setMetricBmi] = useState();
@@ -124,12 +124,11 @@ export default function BMIInputTabs() {
                             >
                                 Calculate BMI
                             </button>
-                            {standardBmi || metricBmi && <div>
+                            <div>
                                 <p>
-                                    <span className="font-semibold">BMI:</span> {activeTab === 1 ? (isNaN(standardBmi) ? "" : standardBmi.toFixed(2)) : (isNaN(metricBmi) ? "" : metricBmi.toFixed(2))}
+                                    <span className="font-semibold">BMI: </span> {activeTab === 1 ? (isNaN(standardBmi) ? "" : standardBmi) : (isNaN(metricBmi) ? "" : metricBmi)}
                                 </p>
                             </div>
-                            }
                         </div>
                     </div>
                 )}
@@ -154,19 +153,18 @@ export default function BMIInputTabs() {
                                 </label>
                             </div>
                         </div>
-                        <div>
+                        <div className="flex flex-col">
                             <button
                                 className="bmi-calc-btn"
                                 onClick={calculateMetricBmi}
                             >
                                 Calculate BMI
                             </button>
-                            {standardBmi || metricBmi && <div>
+                            <div>
                                 <p>
-                                    <span className="font-semibold">BMI:</span> {activeTab === 1 ? standardBmi.toFixed(2) : metricBmi.toFixed(2)}
+                                    <span className="font-semibold">BMI: </span> {activeTab === 1 ? standardBmi : metricBmi}
                                 </p>
                             </div>
-                            }
                         </div>
                     </div>
                 )}
