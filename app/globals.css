@@ -166,3 +166,19 @@ input:disabled {
   @apply cursor-not-allowed;
 }
 
+.calculators-h1, .converters-h1, .counters-h1 {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+.calculators-p, .converters-p, .counters-p {
+  font-size: clamp(1.125rem, 2vw, 1.75rem);
+}
+.calculators-list > ul > li, .converters-list > ul > li, .counters-list > ul > li {
+  font-size: clamp(1rem, 2vw, 2rem);
+  @apply hover:underline hover:underline-offset-2 hover:text-cyan-600;
+}
+.calculators-list > ul, .converters-list > ul, .counters-list > ul {
+  list-style: circle;
+  list-style-position: inside;
+  margin-left: 1rem;
+}
+
