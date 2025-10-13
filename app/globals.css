@@ -181,5 +181,22 @@ input:disabled {
   list-style-position: inside;
   margin-left: 1rem;
 }
+.emi-input {
+  @apply border border-neutral-500 rounded;
+}
+.emi-btn {
+  @apply bg-cyan-600 text-white px-4 py-2 rounded w-fit flex justify-center items-center cursor-pointer hover:bg-cyan-700;
+}
+.emi-form-container {
+  @apply p-7 flex justify-start items-start flex-col gap-5;
+  @apply border border-neutral-600 rounded-sm;
+}
+.emi-form-field {
+  @apply flex items-start justify-start gap-5;
+}
+.emi-result {
+  @apply text-cyan-900 font-bold;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
 
 
