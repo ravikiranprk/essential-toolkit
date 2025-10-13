@@ -1,10 +1,10 @@
-import { calculators, converters, counters } from "@/constants";
+import { calculators, converters, counters, generators } from "@/constants";
 
 export default function Footer() {
     return (
         <footer className="sm:px-40 p-4 py-6 flex flex-col gap-5 justify-center bg-gray-700 text-zinc-50">
             {/* Useful links */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:justify-between items-center sm:items-start justify-center">
+            <div className="flex flex-col md:flex-row gap-4 md:justify-between items-center md:items-start justify-center">
                 {/* calculators */}
                 <div className="flex flex-col gap-2">
                     <h3 className="footer-header md:font-2xl font-semibold">Calculators</h3>
@@ -38,7 +38,17 @@ export default function Footer() {
                         }
                     </ul>
                 </div>
-
+                {/* generators */}
+                <div className="flex flex-col gap-2">
+                    <h3 className="footer-header md:font-2xl font-semibold">Generators</h3>
+                    <ul>
+                        {
+                            generators.map((item) => (
+                                <li key={item.id}><a href={item.url}>{item.name}</a></li>
+                            ))
+                        }
+                    </ul>
+                </div>
             </div>
             <br />
             <hr />

@@ -1,6 +1,6 @@
 import ComingSoon from "@/components/ComingSoon";
 
-export default function CGPACalc() {
+export default function SummaryGenerator() {
     return (
         <ComingSoon />
     )

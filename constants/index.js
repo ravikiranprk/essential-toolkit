@@ -19,6 +19,11 @@ export const navItems = [
         name: "Counters",
         url: "/counters",
     },
+    {
+        id: 5,
+        name: "Generators",
+        url: "/generators",
+    }
 ];
 
 export const calculators = [
@@ -110,11 +115,6 @@ export const generators = [
         name: "Summary Generator",
         url: "/summary-generator",
     },
-    {
-        id: 3,
-        name: "QR Code Generator",
-        url: "/qr-code-generator",
-    },
 ];
 
 export const homeImages = [
@@ -133,4 +133,9 @@ export const homeImages = [
         title: "Counters",
         url: "/Counters.png",
     },
+    {
+        id: 4,
+        title: "Generators",
+        url: "/Generators.png",
+    }
 ]
