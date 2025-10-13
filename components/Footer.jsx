@@ -43,7 +43,7 @@ export default function Footer() {
             <br />
             <hr />
             <p className="flex items-center justify-center">
-                &copy; Essential Calculator @ {new Date().getFullYear()}. All rights reserved.
+                &copy; Essential Toolkit @ {new Date().getFullYear()}. All rights reserved.
             </p>
         </footer>
     )
