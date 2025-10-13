@@ -62,11 +62,16 @@ export const converters = [
     },
     {
         id: 2,
-        name: "Units Converter",
-        url: "/units-converter",
+        name: "Length Converter",
+        url: "/length-converter",
     },
     {
         id: 3,
+        name: "Weight Converter",
+        url: "/weight-converter",
+    },
+    {
+        id: 4,
         name: "Currency Converter",
         url: "/currency-converter",
     },

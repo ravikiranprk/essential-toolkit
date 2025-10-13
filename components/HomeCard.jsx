@@ -1,6 +1,6 @@
 export default function HomeCard({ title, url, currentItems, className }) {
     return (
-        <header className={`${className} rounded-xl`}>
+        <header className={`${className} rounded-xl shadow-md shadow-cyan-600`}>
             <section>
                 <img src={url} alt={title} className="md:max-w-4/5 w-full" />
             </section>
