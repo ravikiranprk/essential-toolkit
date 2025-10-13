@@ -99,6 +99,24 @@ export const counters =[
     },
 ];
 
+export const generators = [
+    {
+        id: 1,
+        name: "Password Generator",
+        url: "/password-generator",
+    },
+    {
+        id: 2,
+        name: "Summary Generator",
+        url: "/summary-generator",
+    },
+    {
+        id: 3,
+        name: "QR Code Generator",
+        url: "/qr-code-generator",
+    },
+];
+
 export const homeImages = [
     {
         id: 1,
