@@ -183,7 +183,7 @@ export default function WeightConverter() {
     }
 
     return (
-        <main className="p-7">
+        <main className="p-7 min-h-screen flex justify-center items-center flex-col">
             <h1 className="text-center text-2xl md:text-3xl xl:text-4xl font-bold p-5 bg-gradient-to-br from-sky-950 via-sky-500 to-sky-100 bg-clip-text text-transparent">Weight Converter</h1>
             <section className="flex flex-col gap-2">
                 <p>Weight Converter is an utility tool used to convert different weights into other types of weights. This can be used for converting kilograms, grams, milligrams, pounds, and mounces. This is used for learning and practice.</p>
