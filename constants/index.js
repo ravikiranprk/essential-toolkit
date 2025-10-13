@@ -34,18 +34,18 @@ export const calculators = [
     },
     {
         id: 3,
+        name: "EMI Calculator",
+        url: "/emi-calc",
+    },
+    {
+        id: 4,
         name: "GPA Calculator",
         url: "/gpa-calc",
     },
     {
-        id: 4,
+        id: 5,
         name: "CGPA Calculator",
         url: "/cgpa-calc",
-    },
-    {
-        id: 5,
-        name: "EMI Calculator",
-        url: "/emi-calc",
     },
     {
         id: 6,
@@ -72,6 +72,11 @@ export const converters = [
     },
     {
         id: 4,
+        name: "Number Converter",
+        url: "/number-converter",
+    },
+    {
+        id: 5,
         name: "Currency Converter",
         url: "/currency-converter",
     },
