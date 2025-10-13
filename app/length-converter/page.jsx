@@ -274,7 +274,7 @@ export default function UnitsConverter() {
     const fToY = useMemo(() => feetToYards(currentUnit), [currentUnit]);
     const fToMi = useMemo(() => feetToMiles(currentUnit), [currentUnit]);
 
-    const convertTemperature = (base, target) => {
+    const convertLength = (base, target) => {
         setCurrentUnitType(base);
         setConvertedUnitType(target);
 
@@ -756,7 +756,7 @@ export default function UnitsConverter() {
                         <input type="number" value={convertedUnit} onChange={(e) => setConvertedUnit(e.target.value)} disabled />
                     </div>
                     <div className="temp-conv-btn">
-                        <button onClick={() => convertTemperature(currentUnitType, convertedUnitType)}>Convert</button>
+                        <button onClick={() => convertLength(currentUnitType, convertedUnitType)}>Convert</button>
                     </div>
                 </div>
             </section>
