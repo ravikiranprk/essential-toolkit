@@ -199,4 +199,7 @@ input:disabled {
   font-size: clamp(1.25rem, 2.5vw, 2rem);
 }
 
+.home-li {
+  @apply underline underline-offset-2;
+}
 

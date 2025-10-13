@@ -8,7 +8,7 @@ export default function HomeCard({ title, url, currentItems, className }) {
                 {
                     currentItems.map((item) => (
                         <section key={item.id}>
-                            <a href={item.url}>{item.name}</a>
+                            <a href={item.url} className="home-li">{item.name}</a>
                         </section>
                     ))
                 }
