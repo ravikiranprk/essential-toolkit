@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 
 const decimalToBinary = (decimal) => Number(decimal).toString(2);
 const decimalToOctal = (decimal) => Number(decimal).toString(8);
-const decimalToHexadecimal = (decimal) => {const num = Number(decimal); return num.toString(16);}
+const decimalToHexadecimal = (decimal) => Number(decimal).toString(16).toUpperCase();
 const decimalToDecimal = (decimal) => Number(decimal);
 
 const binaryToDecimal = (binary) => parseInt(Number(binary), 2);
@@ -26,7 +26,7 @@ export default function NumberConverter() {
     const [convertedNumberType, setConvertedNumberType] = useState("binary" || "octal" || "hexadecimal" || "decimal");
 
     const [currentNumber, setCurrentNumber] = useState(0);
-    const [convertedNumber, setConvertedNumber] = useState(0 || "");
+    const [convertedNumber, setConvertedNumber] = useState(0);
 
     const dToB = useMemo(() => decimalToBinary(currentNumber), [currentNumber]);
     const dToO = useMemo(() => decimalToOctal(currentNumber), [currentNumber]);
@@ -147,7 +147,7 @@ export default function NumberConverter() {
                             <option value="octal">Octal</option>
                             <option value="hexadecimal">Hexa Decimal</option>
                         </select>
-                        <input type="number" value={currentNumber} onChange={(e) => setCurrentNumber(e.target.value)} />
+                        <input type="text" value={currentNumber} onChange={(e) => setCurrentNumber(e.target.value)} />
                     </div>
                     <div className="text-xl">To</div>
                     <div className="temp-conv-input">
@@ -157,7 +157,7 @@ export default function NumberConverter() {
                             <option value="hexadecimal">Hexa Decimal</option>
                             <option value="decimal">Decimal</option>
                         </select>
-                        <input type="number" value={convertedNumber} onChange={(e) => setConvertedNumber(e.target.value)} disabled />
+                        <input type="text" value={convertedNumber} onChange={(e) => setConvertedNumber(e.target.value)} disabled />
                     </div>
                     <div className="temp-conv-btn">
                         <button onClick={() => convertNumber(currentNumberType, convertedNumberType)}>Convert</button>
