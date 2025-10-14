@@ -137,18 +137,18 @@ select {
 }
 
 .temp-conv-container {
-  @apply flex flex-col md:flex-row p-8 md:p-16 items-center justify-center;
+  @apply flex flex-col md:flex-row p-2 md:p-5 items-center justify-center;
 }
 .temp-conv-form-container {
-  width: clamp(400px, 75vw, 600px);
+  width: clamp(300px, 65vw, 460px);
   height: clamp(360px, 45vh, 700px);
-  @apply border border-gray-200 p-6 rounded-md;
-  @apply flex items-center justify-center flex-col gap-5; 
+  @apply border border-gray-200 p-3 rounded-md;
+  @apply flex items-center justify-center flex-col gap-3; 
   @apply bg-zinc-100 shadow-md shadow-gray-500; 
 }
 .temp-conv-input > input, .temp-conv-input > select {
-  width: 10rem;
-  font-size: clamp(1rem, 2.25vw, 1.75rem);
+  width: clamp(7rem, 5vw, 20rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   @apply border border-zinc-600;
   @apply p-2 rounded-sm;
 }
