@@ -140,14 +140,14 @@ select {
   @apply flex flex-col md:flex-row p-2 md:p-5 items-center justify-center;
 }
 .temp-conv-form-container {
-  width: clamp(300px, 65vw, 460px);
+  width: clamp(300px, 65vw, 600px);
   height: clamp(360px, 45vh, 700px);
   @apply border border-gray-200 p-3 rounded-md;
   @apply flex items-center justify-center flex-col gap-3; 
   @apply bg-zinc-100 shadow-md shadow-gray-500; 
 }
 .temp-conv-input > input, .temp-conv-input > select {
-  width: clamp(7rem, 5vw, 20rem);
+  width: clamp(7rem, 15vw, 20rem);
   font-size: clamp(1rem, 2vw, 1.25rem);
   @apply border border-zinc-600;
   @apply p-2 rounded-sm;
