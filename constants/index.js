@@ -30,32 +30,32 @@ export const calculators = [
     {
         id: 1,
         name: "Age Calculator",
-        url: "/age-calc",
+        url: "/calculators/age-calc",
     },
     {
         id: 2,
         name: "BMI Calculator",
-        url: "/bmi-calc",
+        url: "/calculators/bmi-calc",
     },
     {
         id: 3,
         name: "EMI Calculator",
-        url: "/emi-calc",
+        url: "/calculators/emi-calc",
     },
     {
         id: 4,
         name: "GPA Calculator",
-        url: "/gpa-calc",
+        url: "/calculators/gpa-calc",
     },
     {
         id: 5,
         name: "CGPA Calculator",
-        url: "/cgpa-calc",
+        url: "/calculators/cgpa-calc",
     },
     {
         id: 6,
         name: "Math Calculator",
-        url: "/math-calc",
+        url: "/calculators/math-calc",
     },
 ];
 
@@ -63,44 +63,44 @@ export const converters = [
     {
         id: 1,
         name: "Temperature Converter",
-        url: "/temperature-converter",
+        url: "/converters/temperature-converter",
     },
     {
         id: 2,
         name: "Length Converter",
-        url: "/length-converter",
+        url: "/converters/length-converter",
     },
     {
         id: 3,
         name: "Weight Converter",
-        url: "/weight-converter",
+        url: "/converters/weight-converter",
     },
     {
         id: 4,
         name: "Number Converter",
-        url: "/number-converter",
+        url: "/converters/number-converter",
     },
     {
         id: 5,
         name: "Currency Converter",
-        url: "/currency-converter",
+        url: "/converters/currency-converter",
     },
 ];
 export const counters =[
     {
         id: 1,
         name: "Words Counter",
-        url: "/word-counter",
+        url: "/counters/word-counter",
     },
     {
         id: 2,
         name: "Letters Counter",
-        url: "/letter-counter",
+        url: "/counters/letter-counter",
     },
     {
         id: 3,
         name: "Sentence Counter",
-        url: "/sentence-counter",
+        url: "/counters/sentence-counter",
     },
 ];
 
@@ -108,12 +108,12 @@ export const generators = [
     {
         id: 1,
         name: "Password Generator",
-        url: "/password-generator",
+        url: "/generators/password-generator",
     },
     {
         id: 2,
         name: "Summary Generator",
-        url: "/summary-generator",
+        url: "/generators/summary-generator",
     },
 ];
 
