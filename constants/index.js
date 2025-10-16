@@ -173,6 +173,7 @@ const numberConverterOptions = ["binary", "octal", "decimal", "hexadecimal"];
 const temperatureConverterOptions = ["celsius", "fahrenheit", "kelvin", "rankine"];
 const weightConverterOptions = ["grams", "kilograms", "ounces", "pounds"];
 const speedConverterOptions = ["meters/second", "kilometers/hour", "miles/hour"];
+const timeConverterOptions = ["minutes", "hours", "days", "weeks", "months", "years", "seconds", "milliseconds"];
 
 export { 
     navItems,
@@ -187,5 +188,5 @@ export {
     temperatureConverterOptions,
     weightConverterOptions,
     speedConverterOptions,
-
+    timeConverterOptions,
 };

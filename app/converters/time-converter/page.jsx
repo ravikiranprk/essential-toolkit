@@ -1,7 +1,7 @@
-import ComingSoon from "@/components/ComingSoon";
+import TimeConv from "@/components/TimeConv";
 
 export default function TimeConverter() {
     return (
-        <ComingSoon />
+        <TimeConv />
     )
 }
