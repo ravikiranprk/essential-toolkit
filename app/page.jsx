@@ -1,6 +1,5 @@
 import HomeCard from "@/components/HomeCard";
 import { calculators, converters, counters, generators } from "@/constants";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -31,7 +30,7 @@ export default function Home() {
         title="Generators"
         url="/Generators.png"
         currentItems={generators}
-        className="flex flex-col gap-12 md:flex-row p-8 md:p-16 items-center justify-center bg-cyan-100"
+        className="flex flex-col gap-12 md:flex-row-reverse p-8 md:p-16 items-center justify-center bg-cyan-100"
         sectionUrl="/generators"
       />
     </main>
