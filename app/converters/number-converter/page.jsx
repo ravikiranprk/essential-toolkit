@@ -1,4 +1,6 @@
 "use client";
+import Converter from "@/components/Converter";
+import { numberConverterOptions } from "@/constants";
 import { useMemo, useState } from "react";
 
 const decimalToBinary = (decimal) => Number(decimal).toString(2);
@@ -128,42 +130,19 @@ export default function NumberConverter() {
     }
 
     return (
-        <main className="p-7 min-h-screen flex justify-center items-center flex-col">
-            <h1 className="text-center text-2xl md:text-3xl xl:text-4xl font-bold p-5 bg-gradient-to-br from-sky-950 via-sky-500 to-sky-100 bg-clip-text text-transparent">Number Converter</h1>
-            <section className="flex flex-col gap-2">
-                <p>
-                    Number Converter is an utility tool used to convert numbers from one unit to another, such as decimal to binary, octal to hexadecimal, and more.
-                </p>
-                <p className="bg-clip-text text-transparent bg-gradient-to-br from-sky-950 via-sky-500 to-sky-100">
-                    - Number Converter by Essential Toolkit
-                </p>
-            </section>
-            <section className="temp-conv-container">
-                <div className="temp-conv-form-container">
-                    <div className="temp-conv-input">
-                        <select onChange={(e) => setCurrentNumberType(e.target.value)} value={currentNumberType}>
-                            <option value="decimal">Decimal</option>
-                            <option value="binary">Binary</option>
-                            <option value="octal">Octal</option>
-                            <option value="hexadecimal">Hexa Decimal</option>
-                        </select>
-                        <input type="text" value={currentNumber} onChange={(e) => setCurrentNumber(e.target.value)} />
-                    </div>
-                    <div className="text-xl">To</div>
-                    <div className="temp-conv-input">
-                        <select onChange={(e) => setConvertedNumberType(e.target.value)} value={convertedNumberType}>
-                            <option value="binary">Binary</option>
-                            <option value="octal">Octal</option>
-                            <option value="hexadecimal">Hexa Decimal</option>
-                            <option value="decimal">Decimal</option>
-                        </select>
-                        <input type="text" value={convertedNumber} onChange={(e) => setConvertedNumber(e.target.value)} disabled />
-                    </div>
-                    <div className="temp-conv-btn">
-                        <button onClick={() => convertNumber(currentNumberType, convertedNumberType)}>Convert</button>
-                    </div>
-                </div>
-            </section>
-        </main>
+        <Converter 
+            title="Number Conveter" 
+            description="Number Converter is a tool that allows you to convert numbers between different bases. You can convert between decimal, binary, octal, and hexadecimal."
+            options={numberConverterOptions} 
+            converterFunction={convertNumber}
+            currentValue={currentNumber}
+            setCurrentValue={setCurrentNumber}
+            convertedValue={convertedNumber}
+            setConvertedValue={setConvertedNumber}
+            currentType={currentNumberType}
+            setCurrentType={setCurrentNumberType}
+            convertedType={convertedNumberType}
+            setConvertedType={setConvertedNumberType}
+        />
     )
 }

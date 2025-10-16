@@ -136,29 +136,42 @@ select {
   font-size: clamp(1.25rem, 2.5vw, 2rem);
 }
 
-.temp-conv-container {
+
+/* Converter styles */
+.conv-main {
+  @apply p-7 min-h-screen flex justify-center items-center flex-col;
+}
+.conv-h1 {
+  @apply text-center font-bold p-5 bg-gradient-to-br from-sky-950 via-sky-500 to-sky-100 bg-clip-text text-transparent;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+.conv-description {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
+.conv-container {
   @apply flex flex-col md:flex-row p-2 md:p-5 items-center justify-center;
 }
-.temp-conv-form-container {
+.conv-form-container {
   width: clamp(300px, 65vw, 600px);
   height: clamp(360px, 45vh, 700px);
   @apply border border-gray-200 p-3 rounded-md;
   @apply flex items-center justify-center flex-col gap-3; 
   @apply bg-zinc-100 shadow-md shadow-gray-500; 
 }
-.temp-conv-input > input, .temp-conv-input > select {
+.conv-input > input, .temp-conv-input > select {
   width: clamp(7rem, 15vw, 20rem);
   font-size: clamp(1rem, 2vw, 1.25rem);
   @apply border border-zinc-600;
   @apply p-2 rounded-sm;
 }
-.temp-conv-input {
+.conv-input {
   @apply flex gap-4;
 }
-.temp-conv-btn > button {
+.conv-btn > button {
   @apply bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded cursor-pointer shadow-sm shadow-cyan-900;
   font-size: clamp(1rem, 2.25vw, 1.75rem);
 }
+
 select {
   @apply cursor-pointer;
 }

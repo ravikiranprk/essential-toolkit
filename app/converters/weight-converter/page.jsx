@@ -1,5 +1,7 @@
 "use client";
 
+import Converter from "@/components/Converter";
+import { weightConverterOptions } from "@/constants";
 import { useMemo, useState } from "react";
 
 const gramsToKilograms = (grams) => Number(grams) / 1000;
@@ -183,42 +185,19 @@ export default function WeightConverter() {
     }
 
     return (
-        <main className="p-7 min-h-screen flex justify-center items-center flex-col">
-            <h1 className="text-center text-2xl md:text-3xl xl:text-4xl font-bold p-5 bg-gradient-to-br from-sky-950 via-sky-500 to-sky-100 bg-clip-text text-transparent">Weight Converter</h1>
-            <section className="flex flex-col gap-2">
-                <p>Weight Converter is an utility tool used to convert different weights into other types of weights. This can be used for converting kilograms, grams, milligrams, pounds, and mounces. This is used for learning and practice.</p>
-                <p className="bg-clip-text text-transparent bg-gradient-to-br from-sky-950 via-sky-500 to-sky-100">
-                    - Weight Converter by Essential Toolkit
-                </p>
-            </section>
-            <section className="temp-conv-container">
-                <div className="temp-conv-form-container">
-                    <div className="temp-conv-input">
-                        <select onChange={(e) => setCurrentWeightType(e.target.value)} value={currentWeightType}>
-                            <option value="grams">Grams</option>
-                            <option value="milligrams">Milligrams</option>
-                            <option value="kilograms">Kilograms</option>
-                            <option value="pounds">Pounds</option>
-                            <option value="ounces">Ounces</option>
-                        </select>
-                        <input type="number" value={currentWeight} onChange={(e) => setCurrentWeight(e.target.value)} />
-                    </div>
-                    <div className="text-xl">To</div>
-                    <div className="temp-conv-input">
-                        <select onChange={(e) => setConvertedWeightType(e.target.value)} value={convertedWeightType}>
-                            <option value="kilograms">Kilograms</option>
-                            <option value="grams">Grams</option>
-                            <option value="milligrams">Milligrams</option>
-                            <option value="pounds">Pounds</option>
-                            <option value="ounces">Ounces</option>
-                        </select>
-                        <input type="number" value={convertedWeight} onChange={(e) => setConvertedWeight(e.target.value)} disabled />
-                    </div>
-                    <div className="temp-conv-btn">
-                        <button onClick={() => convertWeight(currentWeightType, convertedWeightType)}>Convert</button>
-                    </div>
-                </div>
-            </section>
-        </main>
+        <Converter 
+            title="Weight Converter"
+            description="Weight Converter is an utility tool used to convert different weights into other types of weights. This can be used for converting kilograms, grams, milligrams, pounds, and mounces. This is used for learning and practice."
+            options={weightConverterOptions}
+            currentValue={currentWeight}
+            setCurrentValue={setCurrentWeight}
+            convertedValue={convertedWeight}
+            setConvertedValue={setConvertedWeight}
+            currentType={currentWeightType}
+            setCurrentType={setCurrentWeightType}
+            convertedType={convertedWeightType}
+            setConvertedType={setConvertedWeightType}
+            converterFunction={convertWeight}
+        />
     );
 }

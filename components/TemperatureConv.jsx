@@ -1,6 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Converter from "./Converter";
+import { temperatureConverterOptions } from "@/constants";
 
 const celsiusToFahrenheit = (celsius) => (Number(celsius) * 9 / 5) + 32;
 const fahrenheitToCelsius = (fahrenheit) => (Number(fahrenheit) - 32) * (5/9);
@@ -129,31 +131,19 @@ export default function TemperatureConv() {
     }
 
     return (
-        <main className="temp-conv-container">
-            <div className="temp-conv-form-container">
-                <div className="temp-conv-input">
-                    <select onChange={(e) => setCurrentTempType(e.target.value)} value={currentTempType}>
-                        <option value="celsius">Celsius</option>
-                        <option value="fahrenheit">Fahrenheit</option>
-                        <option value="kelvin">Kelvin</option>
-                        <option value="rankine">Rankine</option>
-                    </select>
-                    <input type="number" value={currentTemp} onChange={(e) => setCurrentTemp(e.target.value)} />
-                </div>
-                <div className="text-xl">To</div>
-                <div className="temp-conv-input">
-                    <select onChange={(e) => setConvertedTempType(e.target.value)} value={convertedTempType}>
-                        <option value="celsius">Celsius</option>
-                        <option value="fahrenheit">Fahrenheit</option>
-                        <option value="kelvin">Kelvin</option>
-                        <option value="rankine">Rankine</option>
-                    </select>
-                    <input type="number" value={convertedTemp} onChange={(e) => setConvertedTemp(e.target.value)} disabled />
-                </div>
-                <div className="temp-conv-btn">
-                    <button onClick={() => convertTemperature(currentTempType, convertedTempType)}>Convert</button>
-                </div>
-            </div>
-        </main>
+        <Converter 
+            title="Temperature Converter" 
+            description="Temperature is an online utility tool that allows you to convert different units of temperature such as Celsius, Fahrenheit, Kelvin, and Rankine."
+            options={temperatureConverterOptions} 
+            converterFunction={convertTemperature}
+            currentValue={currentTemp}
+            setCurrentValue={setCurrentTemp}
+            convertedValue={convertedTemp}
+            setConvertedValue={setConvertedTemp}
+            currentType={currentTempType}
+            setCurrentType={setCurrentTempType}
+            convertedType={convertedTempType}
+            setConvertedType={setConvertedTempType}
+        />
     )
 }

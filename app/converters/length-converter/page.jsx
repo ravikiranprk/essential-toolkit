@@ -1,5 +1,7 @@
 "use client";
 
+import Converter from "@/components/Converter";
+import { lengthConverterOptions } from "@/constants";
 import { useMemo, useState } from "react";
 
 const metersToMeters = (meters) => Number(meters);
@@ -712,54 +714,19 @@ export default function UnitsConverter() {
     }
 
     return (
-        <main className="p-7 min-h-screen flex justify-center items-center flex-col">
-            <h1 className="text-center text-2xl md:text-3xl xl:text-4xl font-bold p-5 bg-gradient-to-br from-sky-950 via-sky-500 to-sky-100 bg-clip-text text-transparent">Length Converter</h1>
-            <section className="flex flex-col gap-2">
-                <p>Length Converter is an utility tool used to convert different units of length into other types of units. This can be used for converting meters, kilometers, centimeters, inches, and more. This is used for learning and practice.</p>
-                <p className="bg-clip-text text-transparent bg-gradient-to-br from-sky-950 via-sky-500 to-sky-100">
-                    - Length Converter by Essential Toolkit
-                </p>
-            </section>
-            <section className="temp-conv-container">
-                <div className="temp-conv-form-container">
-                    <div className="temp-conv-input">
-                        <select onChange={(e) => setCurrentUnitType(e.target.value)} value={currentUnitType}>
-                            <option value="meters">Meters</option>
-                            <option value="millimeters">Millimeters</option>
-                            <option value="centimeters">Centimeters</option>
-                            <option value="kilometers">Kilometers</option>
-                            <option value="decimeters">Decimeters</option>
-                            <option value="hectometers">Hectometers</option>
-                            <option value="decameters">Decameters</option>
-                            <option value="inches">Inches</option>
-                            <option value="feet">Feet</option>
-                            <option value="yards">Yards</option>
-                            <option value="miles">Miles</option>
-                        </select>
-                        <input type="number" value={currentUnit} onChange={(e) => setCurrentUnit(e.target.value)} />
-                    </div>
-                    <div className="text-xl">To</div>
-                    <div className="temp-conv-input">
-                        <select onChange={(e) => setConvertedUnitType(e.target.value)} value={convertedUnitType}>
-                            <option value="meters">Meters</option>
-                            <option value="millimeters">Millimeters</option>
-                            <option value="centimeters">Centimeters</option>
-                            <option value="kilometers">Kilometers</option>
-                            <option value="decimeters">Decimeters</option>
-                            <option value="hectometers">Hectometers</option>
-                            <option value="decameters">Decameters</option>
-                            <option value="inches">Inches</option>
-                            <option value="feet">Feet</option>
-                            <option value="yards">Yards</option>
-                            <option value="miles">Miles</option>
-                        </select>
-                        <input type="number" value={convertedUnit} onChange={(e) => setConvertedUnit(e.target.value)} disabled />
-                    </div>
-                    <div className="temp-conv-btn">
-                        <button onClick={() => convertLength(currentUnitType, convertedUnitType)}>Convert</button>
-                    </div>
-                </div>
-            </section>
-        </main>
+        <Converter 
+            title="Length Conveter" 
+            description="Length Converter is an essential tool for those who need to convert between different units of length. It is a simple and easy-to-use tool that allows you to convert between meters, kilometers, and more."
+            options={lengthConverterOptions} 
+            converterFunction={convertLength}
+            currentValue={currentUnit}
+            setCurrentValue={setCurrentUnit}
+            convertedValue={convertedUnit}
+            setConvertedValue={setConvertedUnit}
+            currentType={currentUnitType}
+            setCurrentType={setCurrentUnitType}
+            convertedType={convertedUnitType}
+            setConvertedType={setConvertedUnitType}
+        />
     );
 }

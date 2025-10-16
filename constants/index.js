@@ -1,4 +1,4 @@
-export const navItems = [
+const navItems = [
     {
         id: 1,
         name: "Home",
@@ -26,7 +26,7 @@ export const navItems = [
     }
 ];
 
-export const calculators = [
+const calculators = [
     {
         id: 1,
         name: "Age Calculator",
@@ -59,7 +59,7 @@ export const calculators = [
     },
 ];
 
-export const converters = [
+const converters = [
     {
         id: 1,
         name: "Temperature Converter",
@@ -96,7 +96,7 @@ export const converters = [
         url: "/converters/currency-converter",
     },
 ];
-export const counters =[
+const counters =[
     {
         id: 1,
         name: "Words Counter",
@@ -114,7 +114,7 @@ export const counters =[
     },
 ];
 
-export const generators = [
+const generators = [
     {
         id: 1,
         name: "Password Generator",
@@ -127,7 +127,7 @@ export const generators = [
     },
 ];
 
-export const homeImages = [
+const homeImages = [
     {
         id: 1,
         title: "Calculators",
@@ -148,4 +148,25 @@ export const homeImages = [
         title: "Generators",
         url: "/Generators.png",
     }
-]
+];
+
+const lengthConverterOptions = ["meters", "millimeters", "centimeters", "kilometers", "decimeters", "hectometers", "decameters", "inches", "feet", "yards", "miles"];
+const numberConverterOptions = ["binary", "octal", "decimal", "hexadecimal"];
+const temperatureConverterOptions = ["celsius", "fahrenheit", "kelvin", "rankine"];
+const weightConverterOptions = ["grams", "kilograms", "ounces", "pounds"];
+const speedConverterOptions = ["meters/second", "kilometers/hour", "miles/hour"];
+
+export { 
+    navItems,
+    calculators,
+    converters,
+    counters,
+    generators,
+    homeImages,
+    lengthConverterOptions,
+    numberConverterOptions,
+    temperatureConverterOptions,
+    weightConverterOptions,
+    speedConverterOptions,
+
+};
