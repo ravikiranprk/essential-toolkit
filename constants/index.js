@@ -127,6 +127,19 @@ const generators = [
     },
 ];
 
+const formulas = [
+    {
+        id: 1,
+        name: "Quantitative Aptitude",
+        url: "/formulas/quantitative-aptitude",
+    },
+    {
+        id: 2,
+        name: "Engineering Mathematics",
+        url: "/formulas/engineering-mathematics",
+    }
+];
+
 const homeImages = [
     {
         id: 1,
@@ -147,6 +160,11 @@ const homeImages = [
         id: 4,
         title: "Generators",
         url: "/Generators.png",
+    },
+    {
+        id: 5,
+        title: "Formulas",
+        url: "/Formulas.png",
     }
 ];
 
@@ -162,6 +180,7 @@ export {
     converters,
     counters,
     generators,
+    formulas,
     homeImages,
     lengthConverterOptions,
     numberConverterOptions,

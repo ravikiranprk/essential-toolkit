@@ -1,5 +1,5 @@
 import HomeCard from "@/components/HomeCard";
-import { calculators, converters, counters, generators } from "@/constants";
+import { calculators, converters, counters, formulas, generators } from "@/constants";
 
 export default function Home() {
   return (
@@ -32,6 +32,13 @@ export default function Home() {
         currentItems={generators}
         className="flex flex-col gap-12 md:flex-row-reverse p-8 md:p-16 items-center justify-center bg-cyan-100"
         sectionUrl="/generators"
+      />
+      <HomeCard 
+        title="Formulas"
+        url="/Formulas.png"
+        currentItems={formulas}
+        className="flex flex-col gap-12 md:flex-row p-8 md:p-16 items-center justify-center bg-cyan-100"
+        sectionUrl="/formulas"
       />
     </main>
   );
