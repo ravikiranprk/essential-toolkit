@@ -82,6 +82,16 @@ export const converters = [
     },
     {
         id: 5,
+        name: "Speed Converter",
+        url: "/converters/speed-converter",
+    },
+    {
+        id: 6,
+        name: "Time Converter",
+        url: "/converters/time-converter",
+    },
+    {
+        id: 7,
         name: "Currency Converter",
         url: "/converters/currency-converter",
     },
