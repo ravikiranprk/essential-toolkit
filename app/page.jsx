@@ -1,18 +1,9 @@
 import HomeCard from "@/components/HomeCard";
 import { calculators, converters, counters, formulas, generators } from "@/constants";
-import { Playwrite_DE_Grund_Guides } from "next/font/google";
-
-const playWrite = Playwrite_DE_Grund_Guides({ 
-  subsets: ['latin'], 
-  weight: '400',
-  display: 'swap',
-  adjustFontFallback: false,
-});
 
 export default function Home() {
   return (
     <main className="flex flex-col p-5 gap-5">
-      <h1 className={`pl-2 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-5 ${playWrite.className} bg-clip-text text-transparent bg-gradient-to-tr from-cyan-800 via-cyan-600 to-cyan-300`}>Essential Toolkit</h1>
       <HomeCard 
         title="Calculators" 
         url="/Calculators.png" 
