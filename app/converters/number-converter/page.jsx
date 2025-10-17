@@ -131,7 +131,7 @@ export default function NumberConverter() {
 
     return (
         <Converter 
-            title="Number Conveter" 
+            title="Number Converter" 
             description="Number Converter is a tool that allows you to convert numbers between different bases. You can convert between decimal, binary, octal, and hexadecimal."
             options={numberConverterOptions} 
             converterFunction={convertNumber}

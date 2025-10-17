@@ -1,9 +1,17 @@
-import { useState } from "react"
+import { Playwrite_DE_Grund_Guides } from "next/font/google";
+
+const playWrite = Playwrite_DE_Grund_Guides({ 
+    subsets: ['latin'], 
+    weight: '400',
+    display: 'swap',
+    adjustFontFallback: false,
+});
 
 export default function Converter({ title, description, options, converterFunction, currentValue, currentType, convertedType, convertedValue, setCurrentValue, setCurrentType, setConvertedType, setConvertedValue }) {
+
     return (
         <main className="conv-main">
-            <h1 className="conv-h1">{title}</h1>
+            <h1 className={`conv-h1 ${playWrite.className} font-black`}>{title}</h1>
             <section className="flex flex-col gap-2">
                 <p className="conv-description">{description}</p>
                 <p className="bg-clip-text text-transparent bg-gradient-to-br from-sky-950 via-sky-500 to-sky-100">
